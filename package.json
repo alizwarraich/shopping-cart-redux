@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://alizwarraich.github.io/shopping-cart-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,12 +9,15 @@
     "@mui/material": "^5.10.2",
     "@reduxjs/toolkit": "^1.7.2",
     "cra-template-redux": "1.0.3",
+    "gh-pages": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-scripts": "5.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
