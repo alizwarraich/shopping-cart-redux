@@ -29,6 +29,7 @@ function App() {
         body: JSON.stringify(cart)
       });
       const data = await res.json();
+      console.log(Object.values(data))
       dispatch(uiActions.showNotification({
         open: true,
         message: 'Request sent successfully',
@@ -43,7 +44,7 @@ function App() {
           type: 'error',
         }))
       });
-  }, [cart])
+  }, [cart, dispatch])
   return (
     <div className="App">
       {notification && <Notification type={notification.type} message={notification.message} />}
